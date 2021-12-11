@@ -107,7 +107,7 @@ function makeNRMTnode(parsed) {
 
     const textNode = document.createElement("a");
     textNode.appendChild(document.createTextNode(mostFrequented));
-    textNode.setAttribute("href", `https://old.reddit.com/r/${mostFrequented}`);
+    textNode.setAttribute("href", `https://www.reddit.com/r/${mostFrequented}`);
     textNode.setAttribute("target", "_blank");
     textNode.style.color = "black";
 
@@ -168,7 +168,7 @@ function mainLoop() {
                 } else {
                     userToNRMTnode[username] = null;
                     const request = new XMLHttpRequest();
-                    const url = `https://old.reddit.com/user/${username}.json?limit=100`;
+                    const url = `https://www.reddit.com/user/${username}.json?limit=100`;
                     request.open("GET", url);
                     request.onreadystatechange = function() {
                         if (request.readyState == 4 && request.status == 200) {
